@@ -4,6 +4,8 @@
 #include <vector>
 #include <stdexcept>
 #include "funkcijos.h"
+void testuotiStudenta();
+
 
 int main() {
     std::vector<Studentas> M;
@@ -24,13 +26,15 @@ int main() {
             std::cout << "8. Atlikti testavimus su vector decode ir list" << std::endl;
             std::cout << "9. Atlikti analizės tyrimą (Strategija 2)\n";
             std::cout << "10. Atlikti analizės tyrimą (Strategija 3)\n";
-            std::cout << "11. Baigti" << std::endl;
+            std::cout << "11. Testuoti Studentas klasę (Rule of Five)" << std::endl;
+            std::cout << "12. Baigti" << std::endl;
 
             std::cin >> pasirinkimas;
             if (std::cin.fail()) throw std::runtime_error("Neteisingas ivesties formatas.");
             M.clear();
 
             switch (pasirinkimas) {
+                
             case 1:
                 skaitymas(M);
                 skaiciavimas(M, gautiPasirinkima());
@@ -72,8 +76,12 @@ int main() {
                 atliktiAnalizeStrategija3();
                 break;
             case 11:
+                testuotiStudenta();
+                break;
+            case 12:
                 std::cout << "Baigiama programa.\n";
                 return 0;
+            
             default:
                 std::cout << "Blogas pasirinkimas.\n";
             }
@@ -83,6 +91,28 @@ int main() {
     catch (const std::runtime_error& e) {
         std::cerr << "Klaida: " << e.what() << std::endl;
     }
+    
+
 
     return 0;
 }
+void testuotiStudenta() {
+    std::vector<int> nd = { 10, 9, 8 };
+    Studentas s1("Jonas", "Jonaitis", nd, 10);
+    s1.skaiciuotiGalutini(true); // ← svarbu!
+
+    Studentas s2 = s1;
+    Studentas s3 = std::move(s1);
+
+    Studentas s4;
+    s4 = s2;
+
+    Studentas s5;
+    s5 = std::move(s3);
+
+    std::cout << "Testas:" << std::endl;
+    std::cout << s2 << std::endl;
+    std::cout << s4 << std::endl;
+    std::cout << s5 << std::endl;
+}
+

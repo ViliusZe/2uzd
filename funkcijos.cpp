@@ -541,3 +541,5 @@ void atliktiAnalizeStrategija3() {
         testuotiStrategija3Deque(failas);
     }
 }
+
+
