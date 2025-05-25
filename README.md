@@ -20,7 +20,6 @@ Versijoje v2.0 išplėsta programos architektūra:
 | v1.5    | Klasės `Zmogus` ir `Studentas` su paveldėjimu |
 | v2.0    | Doxygen dokumentacija, unit testai, diegimo sistema |
 
-| `operator=(Studentas&&)`      | Perkėlimo priskyrimo operatorius  | Perkelia reikšmes                          |
 ---
 
 ## Doxygen dokumentacija
