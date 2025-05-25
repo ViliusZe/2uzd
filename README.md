@@ -62,7 +62,9 @@ void testuotiStudenta() {
     std::cout << s4 << std::endl;
     std::cout << s5 << std::endl;
 }
-```![Screenshot (43)](https://github.com/user-attachments/assets/294f2ec2-69dc-4121-84da-294c79392753)
+```
+
+![Screenshot (43)](https://github.com/user-attachments/assets/294f2ec2-69dc-4121-84da-294c79392753)
 
 
 
