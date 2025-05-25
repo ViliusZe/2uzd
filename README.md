@@ -79,6 +79,7 @@ programa.exe
 g++ test_studentas.cpp Studentas.cpp -o testai -std=c++17
 testai.exe
 ```
+![Screenshot (44)](https://github.com/user-attachments/assets/f9be8f31-cf60-4b59-931d-73effc80f96e)
 
 ---
 
